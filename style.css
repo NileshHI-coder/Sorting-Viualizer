@@ -1,0 +1,119 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#22c1c3;
+  --muted:#9aa4b2;
+  --bar:#60a5fa;
+}
+#username {
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 15px;
+
+    background: linear-gradient(90deg, #ff0000, #ffc400, #ff00c8);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: gradientMove 3s linear infinite;
+    text-shadow: 0px 0px 30px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% }
+    100% { background-position: 200% }
+}
+
+
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(180deg,var(--bg),#071021);
+  color:#e6eef6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+
+body {
+    background: linear-gradient(45deg, #1e1e2e, #6a11cb, #2575fc);
+    background-size: 600% 600%;
+    animation: gradientBg 8s ease infinite;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+@keyframes gradientBg {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+
+.container{
+  width:100%;
+  max-width:1100px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:12px;
+  font-weight:600;
+}
+
+.controls{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+
+.controls button, .controls select, .controls input[type="range"]{
+  padding:8px 10px;
+  border-radius:8px;
+  border:none;
+  background:rgba(255,255,255,0.06);
+  color:var(--muted);
+  outline:none;
+}
+
+.controls label{
+  font-size:14px;
+  color:var(--muted);
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.array-container{
+  height:420px;
+  background:rgba(255,255,255,0.02);
+  border-radius:12px;
+  padding:12px;
+  display:flex;
+  align-items:flex-end;
+  gap:2px;
+  overflow:hidden;
+}
+
+.bar{
+  background:var(--bar);
+  width:10px;
+  border-radius:4px 4px 0 0;
+  display:inline-block;
+  transition: height 0.15s linear, transform 0.15s linear;
+}
+
+.bar.comparing{ background: orange; transform: translateY(-2px); }
+.bar.swapping{ background: crimson; transform: translateY(-3px); }
+.bar.sorted{ background: limegreen; }
+
+footer{ text-align:center; margin-top:8px; color:var(--muted); font-size:13px; }

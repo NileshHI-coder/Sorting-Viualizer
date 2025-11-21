@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Sorting Visualizer</h1>
+    
+
+    <div class="controls">
+      <button id="newArrayBtn">New Array</button>
+
+      <label>Size
+        <input id="sizeSlider" type="range" min="5" max="150" value="40" />
+      </label>
+
+      <label>Speed
+        <input id="speedSlider" type="range" min="1" max="500" value="80" />
+      </label>
+
+      <select id="algoSelect">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="quick">Quick Sort</option>
+      </select>
+
+      <button id="startBtn">Start</button>
+    </div>
+
+    <div id="arrayContainer" class="array-container"></div>
+
+    <footer>
+      <small>Built by you • Practice DSA + UI</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
